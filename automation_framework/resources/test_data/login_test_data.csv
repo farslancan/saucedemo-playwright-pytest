@@ -1,12 +1,13 @@
-id,username,password,isValid,validationMessage
-standard,standard_user,secret_sauce,true,
-locked_out,locked_out_user,secret_sauce,false,Epic sadface: Sorry, this user has been locked out.
-problem,problem_user,secret_sauce,true,
-performance,performance_glitch_user,secret_sauce,true,
-error,error_user,secret_sauce,true,
-visual,visual_user,secret_sauce,true,
-invalid_user_valid_pass,invalid-user@example.com,secret_sauce,false,Epic sadface: Username and password do not match any user in this service
-valid_user_wrong_pass,standard_user,wrong_password,false,Epic sadface: Username and password do not match any user in this service
-invalid_user_wrong_pass,invalid-user@example.com,wrong_password,false,Epic sadface: Username and password do not match any user in this service
-empty_user_empty_pass,,,false,Epic sadface: Username is required
-valid_user_empty_pass,standard_user,,false,Epic sadface: Password is required
+id,username,password,isValid,validationMessage,severity
+standard,standard_user,secret_sauce,true,,major
+locked_out,locked_out_user,secret_sauce,false,Epic sadface: Sorry, this user has been locked out.,critical
+problem,problem_user,secret_sauce,true,,edge
+performance,performance_glitch_user,secret_sauce,true,,edge
+error,error_user,secret_sauce,true,,edge
+visual,visual_user,secret_sauce,true,,edge
+invalid_user_valid_pass,invalid-user@example.com,secret_sauce,false,Epic sadface: Username and password do not match any user in this service,major
+valid_user_wrong_pass,standard_user,wrong_password,false,Epic sadface: Username and password do not match any user in this service,major
+invalid_user_wrong_pass,invalid-user@example.com,wrong_password,false,Epic sadface: Username and password do not match any user in this service,major
+empty_user_empty_pass,,,false,Epic sadface: Username is required,minor
+valid_user_empty_pass,standard_user,,false,Epic sadface: Password is required,minor
+

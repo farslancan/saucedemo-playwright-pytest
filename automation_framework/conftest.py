@@ -7,6 +7,7 @@ import re
 import sys
 import time
 from datetime import datetime
+from pathlib import Path
 
 import allure
 import pytest
@@ -14,6 +15,7 @@ import requests
 from allure_commons.types import AttachmentType
 from playwright.sync_api import sync_playwright
 from automation_framework.config import global_config as gc
+from automation_framework.pages import LoginPage
 
 # Ensure repo root is on PYTHONPATH when tests are run from inside automation_framework
 ROOT_DIR = pathlib.Path(__file__).resolve().parents[1]
@@ -353,3 +355,53 @@ def pytest_runtest_makereport(item, call):
                     attachment_type=AttachmentType.TEXT,
                     extension="txt",
                 )
+
+
+def pytest_sessionfinish(session, exitstatus):
+    results_dir = pathlib.Path(gc.ALLURE_RESULTS_DIR).resolve()
+    report_hint = f"Allure results saved to: {results_dir}\nGenerate report: allure serve {results_dir}"
+    print(report_hint)
+    try:
+        logging.getLogger(__name__).info(report_hint)
+    except Exception:
+        pass
+
+
+@pytest.fixture(scope="session")
+def auth_storage_state(tmp_path_factory, browser, creds):
+    """Log in once and persist storage state for reuse in logged_in_page."""
+    state_path = Path(tmp_path_factory.mktemp("auth")) / "state.json"
+    headless = _bool_str(gc.HEADLESS)
+    context = (
+        browser.new_context(no_viewport=True)
+        if not headless
+        else browser.new_context(viewport={"width": 1920, "height": 1080})
+    )
+    page = context.new_page()
+    LoginPage(page).login(
+        creds["base_url"],
+        creds["username"],
+        creds["password"],
+        {"isValid": True},
+    )
+    context.storage_state(path=str(state_path))
+    context.close()
+    return str(state_path)
+
+
+@pytest.fixture()
+def logged_in_page(browser, auth_storage_state):
+    """Yields a page already authenticated via stored session state."""
+    headless = _bool_str(gc.HEADLESS)
+    context = (
+        browser.new_context(storage_state=auth_storage_state, no_viewport=True)
+        if not headless
+        else browser.new_context(
+            storage_state=auth_storage_state, viewport={"width": 1920, "height": 1080}
+        )
+    )
+    page = context.new_page()
+    page.goto("https://www.saucedemo.com/inventory.html", wait_until="networkidle")
+    yield page
+    context.close()
+
