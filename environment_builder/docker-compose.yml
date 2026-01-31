@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  tests:
+    build: .
+    image: haud/python-playwright-tests:latest
+    working_dir: /app
+    environment:
+      - HEADLESS=0
+    env_file:
+      - .env
+    volumes:
+      - ./automation_framework/reports:/app/automation_framework/reports
+      - ./automation_framework/logs:/app/automation_framework/logs
+    command: ["sleep", "infinity"]
+    stdin_open: true
+    tty: true

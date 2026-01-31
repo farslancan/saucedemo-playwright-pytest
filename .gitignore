@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.zip
+*.db
+*.sqlite
+.env
+.env.*
+*.pkl
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# pytest / cache
+.pytest_cache/
+htmlcov/
+.coverage*
+
+# Playwright/Allure/Reports (regenerated)
+reports/
+automation_framework/reports/
+playwright-report/
+allure-report/
+allure-results/
+
+# OS
+.DS_Store
+Thumbs.db
+

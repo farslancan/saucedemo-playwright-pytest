@@ -1,0 +1,15 @@
+allure-pytest
+allure-python-commons
+playwright
+pytest
+pytest-playwright
+PyYAML
+requests
+pytest-html
+pytest-metadata
+pytest-xdist
+PyMySQL
+cryptography
+tenacity
+black
+ruff
