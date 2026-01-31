@@ -13,6 +13,7 @@ def products(logged_in_page):
 
 
 def test_burger_menu_items_and_actions(logged_in_page, creds):
+    """Major: Burger menu items and actions."""
     burger = BurgerMenuKeywords(logged_in_page)
     burger.open_menu()
     burger.close_menu_and_verify_hidden()
@@ -25,6 +26,7 @@ def test_burger_menu_items_and_actions(logged_in_page, creds):
 
 
 def test_burger_menu_from_cart_checkout(products):
+    """Minor: Burger menu from cart/checkout."""
     products.add_random_items(count=1)
     products.verify_badge_count(expected_count=1)
     products.open_cart()
@@ -37,6 +39,7 @@ def test_burger_menu_from_cart_checkout(products):
 
 
 def test_reset_app_state_clears_cart(products, logged_in_page):
+    """Minor: Reset app state clears cart."""
     products.add_random_items(count=2)
     products.verify_badge_count(expected_count=2)
     menu = BurgerMenuKeywords(logged_in_page)

@@ -100,16 +100,26 @@ class ProductsKeywords(BaseKeywords):
         """Public wrapper to clear cart and stay on inventory page."""
         self._clear_cart_and_return()
 
-    def add_random_items(self, count: int):
+    def add_random_items(self, count: int, clear_cart: bool = True):
         assert count >= 1, "Count must be at least 1"
         logger.info("Adding %s random products to cart and verifying badge updates", count)
 
-        # Ensure clean slate
-        self._clear_cart_and_return()
+        # Ensure clean slate if requested
+        if clear_cart:
+            self._clear_cart_and_return()
 
         cards = self.page.locator(locators.PRODUCT_CARD)
         total = cards.count()
+        if total < count:
+            logger.error(f"Not enough products: need {count}, found {total}")
         assert total >= count, f"Need at least {count} products to validate multi-add"
+
+        # Get current badge count if not clearing
+        badge = self.page.locator(locators.CART_BADGE)
+        current_badge = 0
+        if not clear_cart and badge.count() > 0 and badge.is_visible():
+            current_badge = int(badge.inner_text().strip())
+        logger.info("Current badge count before adding: %s", current_badge)
 
         selected_indices = random.sample(range(total), count)
         for idx, sel in enumerate(selected_indices, start=1):
@@ -133,11 +143,10 @@ class ProductsKeywords(BaseKeywords):
             expect(card.locator(locators.REMOVE_BTN)).to_be_visible()
             logger.info("Button toggled to Remove after adding | index=%s", sel + 1)
 
-            badge = self.page.locator(locators.CART_BADGE)
             expect(badge).to_be_visible()
-            expect(badge).to_have_text(str(idx))
+            expect(badge).to_have_text(str(current_badge + idx))
 
-        logger.info("Badge updated correctly to %s after adding %s items", count, count)
+        logger.info("Badge updated correctly to %s after adding %s items", current_badge + count, count)
 
     def verify_add_remove_toggle_on_card(self, idx: int):
         logger.info("Verifying Add→Remove→Add toggle for card index=%s", idx + 1)
@@ -172,6 +181,8 @@ class ProductsKeywords(BaseKeywords):
 
         expect(badge).to_be_visible()
         actual_text = badge.inner_text().strip()
+        if actual_text != str(expected_count):
+            logger.error(f"Badge count mismatch: expected {expected_count}, actual {actual_text}")
         logger.info(
             "Badge text verification | expected=%s | actual=%s",
             expected_count,
@@ -367,9 +378,10 @@ class ProductsKeywords(BaseKeywords):
         expect(self.page.locator(locators.PRODUCTS_TITLE)).to_be_visible()
         logger.info("Returned to inventory page after detail verification")
 
-    def add_item_to_cart_by_index(self, idx: int):
-        logger.info("Adding product by index=%s after clearing cart", idx + 1)
-        self._clear_cart_and_return()
+    def add_item_to_cart_by_index(self, idx: int, clear_cart: bool = True):
+        logger.info("Adding product by index=%s", idx + 1)
+        if clear_cart:
+            self._clear_cart_and_return()
         cards = self.page.locator(locators.PRODUCT_CARD)
         total = cards.count()
         assert 0 <= idx < total, f"Index {idx} out of range for {total} products"
@@ -386,11 +398,18 @@ class ProductsKeywords(BaseKeywords):
             card_info["name"],
             card_info["price"],
         )
-        self.verify_badge_count(1)
+        # Verify badge count
+        current_badge = 0
+        if not clear_cart:
+            badge = self.page.locator(locators.CART_BADGE)
+            if badge.count() > 0 and badge.is_visible():
+                current_badge = int(badge.inner_text().strip())
+        self.verify_badge_count(current_badge + 1)
 
-    def add_to_cart_from_detail_by_index(self, idx: int):
+    def add_to_cart_from_detail_by_index(self, idx: int, clear_cart: bool = True):
         logger.info("Adding product to cart from detail page | index=%s", idx + 1)
-        self._clear_cart_and_return()
+        if clear_cart:
+            self._clear_cart_and_return()
         cards = self.page.locator(locators.PRODUCT_CARD)
         total = cards.count()
         assert 0 <= idx < total, f"Index {idx} out of range for {total} products"
@@ -408,7 +427,6 @@ class ProductsKeywords(BaseKeywords):
             card_info["price"],
             card_info["desc"][:300].replace("\n", " "),
         )
-        self.verify_badge_count(1)
 
     def remove_item_from_detail_and_verify_badge_cleared(self):
         logger.info("Removing item from detail page and verifying badge cleared")

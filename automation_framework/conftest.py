@@ -16,6 +16,7 @@ from allure_commons.types import AttachmentType
 from playwright.sync_api import sync_playwright
 from automation_framework.config import global_config as gc
 from automation_framework.pages import LoginPage
+from automation_framework.pages import BurgerMenuKeywords
 
 # Ensure repo root is on PYTHONPATH when tests are run from inside automation_framework
 ROOT_DIR = pathlib.Path(__file__).resolve().parents[1]
@@ -262,12 +263,12 @@ def page(ui_context, request):
 
 @pytest.fixture(autouse=True)
 def per_test_file_logger(request):
-    """Create a log file per test under reports/logs/<testname>/; overwrite on reruns of the same nodeid."""
+    """Create a log file per test under reports/logs/<suitename>/<testname>.log; overwrite on reruns of the same nodeid."""
     base_logs_dir = _ensure_dir(pathlib.Path(gc.REPORTS_DIR) / "logs")
+    suite_name = request.module.__name__.replace('test_', '')
     test_name = re.sub(r"[^A-Za-z0-9_.\-]", "_", getattr(request.node, "originalname", request.node.name))
-    test_dir = _ensure_dir(base_logs_dir / test_name)
-    safe_nodeid = re.sub(r"[^A-Za-z0-9_.\-]", "_", request.node.nodeid)
-    log_file = test_dir / f"{safe_nodeid}.log"
+    suite_dir = _ensure_dir(base_logs_dir / suite_name)
+    log_file = suite_dir / f"{test_name}.log"
 
     handler = logging.FileHandler(log_file, mode="w", encoding="utf-8")
     handler.setFormatter(
@@ -400,8 +401,17 @@ def logged_in_page(browser, auth_storage_state):
             storage_state=auth_storage_state, viewport={"width": 1920, "height": 1080}
         )
     )
+    context.base_url = "https://www.saucedemo.com"  # Add base_url attribute to context
     page = context.new_page()
     page.goto("https://www.saucedemo.com/inventory.html", wait_until="networkidle")
     yield page
     context.close()
 
+
+@pytest.fixture(autouse=True)
+def reset_after_test(logged_in_page):
+    yield
+    # Reset app state after each test
+    menu = BurgerMenuKeywords(logged_in_page)
+    menu.open_menu()
+    menu.reset_app_state_and_verify()

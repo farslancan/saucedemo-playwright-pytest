@@ -97,10 +97,9 @@ def perform_login(
         expect(items.first).to_be_visible(timeout=10000)
         assert items.count() >= 1, "Expected at least one inventory item to be listed."
         if not _is_logged_in(page):
+            logger.error("Login failed: not on inventory page or elements not visible")
             page.screenshot(path="login_failure.png", full_page=True)
-        assert _is_logged_in(
-            page
-        ), f"Login might have failed. Current URL: {page.url}. Screenshot saved to login_failure.png"
+        assert _is_logged_in(page), "Login failed"
         return True
 
     if is_valid is False:

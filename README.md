@@ -24,6 +24,24 @@
 - Each test run also produces an HTML report via pytest-html at `automation_framework/reports/pytest-report.html`.
 - The report is self-contained; open it directly in a browser.
 
+## Assumptions and Limitations
+
+### Assumptions:
+- **Browser and Environment**: Tests run on Chrome/Chromium-based Playwright. Other browsers are not supported.
+- **Data Persistence**: SauceDemo application does not persist data across sessions; tests run in isolation.
+- **User Roles**: Only `standard_user` and `error_user` are tested; other roles (e.g., `locked_out_user`) are out of scope.
+- **Network Stability**: Network connection is assumed stable; slow connections are not tested.
+- **Screen Resolution**: Tests run at 1920x1080 resolution; mobile compatibility is not tested.
+
+### Limitations:
+- **Performance Testing**: No load testing or performance measurement; only functional tests.
+- **Cross-Browser**: Only Chromium is supported; Firefox/Safari are not tested.
+- **API Testing**: Only UI testing; backend APIs are not tested.
+- **Data Variability**: Random data reduces predictability; fixed data usage is limited.
+- **CI/CD Integration**: Focused on local runs; full CI/CD integration is missing.
+- **Error Handling**: Network errors or application crashes are out of scope.
+- **Scalability**: Large datasets or parallel tests are limited; 10+ parallel tests not recommended.
+
 ## Run In IDE
 
 ### VS Code

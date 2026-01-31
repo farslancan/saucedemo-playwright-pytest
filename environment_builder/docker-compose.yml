@@ -3,7 +3,7 @@ version: "3.8"
 services:
   tests:
     build: .
-    image: haud/python-playwright-tests:latest
+    image: saucedemo:latest
     working_dir: /app
     environment:
       - HEADLESS=0
@@ -12,6 +12,4 @@ services:
     volumes:
       - ./automation_framework/reports:/app/automation_framework/reports
       - ./automation_framework/logs:/app/automation_framework/logs
-    command: ["sleep", "infinity"]
-    stdin_open: true
-    tty: true
+    command: ["pytest", "-c", "automation_framework/pytest.ini"]

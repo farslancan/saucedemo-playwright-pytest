@@ -4,7 +4,7 @@ try:
     from automation_framework.pages.keywords.login_keywords import LoginPage
     from automation_framework.pages.keywords.burger_menu_keywords import BurgerMenuKeywords
     from automation_framework.pages.keywords.products_keywords import ProductsKeywords
-    from automation_framework.pages.keywords.cart_keywords import CartKeywords
+    from automation_framework.pages.keywords.cart_and_checkout_keywords import CartKeywords
 except Exception as exc:  # pragma: no cover - import guard for editor/runtime without deps
     class LoginPage:  # type: ignore
         def __init__(self, *_, **__):

@@ -1,0 +1,33 @@
+from typing import Final
+
+
+CART_TITLE: Final[str] = "//span[@class='title' and text()='Your Cart']"
+CART_QTY_LABEL: Final[str] = "//div[@class='cart_quantity_label' and text()='QTY']"
+CART_DESC_LABEL: Final[str] = "//div[@class='cart_desc_label' and text()='Description']"
+CONTINUE_SHOPPING_BUTTON: Final[str] = "//button[@id='continue-shopping']"
+CHECKOUT_BUTTON: Final[str] = "//button[@id='checkout']"
+CART_ITEM: Final[str] = "//div[@class='cart_item']"
+CART_QUANTITY: Final[str] = "//div[@class='cart_quantity']"
+INVENTORY_ITEM_NAME: Final[str] = "//div[@class='inventory_item_name']"
+INVENTORY_ITEM_DESC: Final[str] = "//div[@class='inventory_item_desc']"
+INVENTORY_ITEM_PRICE: Final[str] = "//div[@class='inventory_item_price']"
+REMOVE_SAUCE_LABS_BACKPACK_BUTTON: Final[str] = "//button[@id='remove-sauce-labs-backpack']"
+
+# Checkout locators
+CHECKOUT_FIRST_NAME_INPUT: Final[str] = "//input[@id='first-name']"
+CHECKOUT_LAST_NAME_INPUT: Final[str] = "//input[@id='last-name']"
+CHECKOUT_ZIP_INPUT: Final[str] = "//input[@id='postal-code']"
+CHECKOUT_CONTINUE_BUTTON: Final[str] = "//input[@id='continue']"
+CHECKOUT_CANCEL_BUTTON: Final[str] = "//button[@id='cancel']"
+CHECKOUT_INFO_TITLE: Final[str] = "//span[@class='title' and text()='Checkout: Your Information']"
+CHECKOUT_OVERVIEW_TITLE: Final[str] = "//span[@class='title' and text()='Checkout: Overview']"
+PAYMENT_INFO: Final[str] = "//div[@class='summary_value_label' and contains(text(),'SauceCard')]"
+SHIPPING_INFO: Final[str] = "//div[@class='summary_value_label' and contains(text(),'Free Pony Express')]"
+ITEM_TOTAL: Final[str] = "//div[@class='summary_subtotal_label']"
+TAX_TOTAL: Final[str] = "//div[@class='summary_tax_label']"
+TOTAL_PRICE: Final[str] = "//div[@class='summary_total_label']"
+FINISH_BUTTON: Final[str] = "//button[@id='finish']"
+CHECKOUT_COMPLETE_TITLE: Final[str] = "//span[@class='title' and text()='Checkout: Complete!']"
+COMPLETE_TEXT: Final[str] = "//h2[@class='complete-header']"
+BACK_HOME_BUTTON: Final[str] = "//button[@id='back-to-products']"
+CHECKOUT_ERROR_MESSAGE: Final[str] = "//h3[@data-test='error']"

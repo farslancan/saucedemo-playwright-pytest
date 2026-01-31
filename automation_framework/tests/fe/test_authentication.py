@@ -17,6 +17,7 @@ _LOGIN_CASES = load_login_cases(DATA_FILE)
 
 @pytest.mark.parametrize("username,password,validation", _LOGIN_CASES)
 def test_authentication_login(page, creds, username, password, validation):
+    """Major: Authentication login test."""
     is_valid = validation.get("isValid") if isinstance(validation, dict) else None
     if is_valid is False:
         resolved_username = username
@@ -41,7 +42,7 @@ def test_authentication_login(page, creds, username, password, validation):
 
 
 def test_direct_detail_redirects_when_unauthenticated(page, creds):
-    # Ensure we start logged out to verify redirect behaviour
+    """Critical: Direct detail access requires authentication."""
     ensure_logged_out(page)
     detail_url = f"{creds['base_url']}inventory-item.html?id=0"
     page.goto(detail_url, wait_until="networkidle")
@@ -55,7 +56,7 @@ def test_direct_detail_redirects_when_unauthenticated(page, creds):
 
 
 def test_inventory_access_requires_auth(page, creds):
-    # Ensure we start logged out to verify redirect behaviour
+    """Critical: Inventory access requires authentication."""
     ensure_logged_out(page)
     inventory_url = f"{creds['base_url']}inventory.html"
     page.goto(inventory_url, wait_until="networkidle")

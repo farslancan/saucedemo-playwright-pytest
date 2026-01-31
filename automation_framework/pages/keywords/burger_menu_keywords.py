@@ -43,12 +43,14 @@ class BurgerMenuKeywords(BaseKeywords):
 
     def open_menu(self):
         logger.info("Opening burger menu")
-        self.page.locator(burger_locators.BURGER_MENU_BUTTON).click()
-        expect(self.page.locator(burger_locators.BURGER_MENU_ALL_ITEMS)).to_be_visible()
-        expect(self.page.locator(burger_locators.BURGER_MENU_ABOUT)).to_be_visible()
-        expect(self.page.locator(burger_locators.BURGER_MENU_LOGOUT)).to_be_visible()
-        expect(self.page.locator(burger_locators.BURGER_MENU_RESET)).to_be_visible()
-        logger.info("Burger menu opened and items visible")
+        try:
+            expect(self.page.locator(burger_locators.BURGER_MENU).first).to_be_visible()
+        except Exception as e:
+            logger.error(f"Burger menu button not visible: {e}")
+            raise
+        self.page.locator(burger_locators.BURGER_MENU).first.click()
+        expect(self.page.locator(burger_locators.BURGER_MENU_OVERLAY)).to_be_visible()
+        logger.info("Burger menu opened and overlay visible")
 
     def assert_menu_items(self):
         logger.info("Asserting burger menu items are visible")
