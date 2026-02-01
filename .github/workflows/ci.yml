@@ -38,7 +38,7 @@ jobs:
     - name: Run tests with Docker Compose
       run: |
         cd environment_builder
-        docker-compose up --build --abort-on-container-exit
+        docker compose up --build --abort-on-container-exit
 
     - name: Upload Allure Results
       uses: actions/upload-artifact@v4
