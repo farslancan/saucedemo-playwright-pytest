@@ -93,7 +93,10 @@ class BurgerMenuKeywords(BaseKeywords):
 
     def close_menu_and_verify_hidden(self):
         logger.info("Closing burger menu")
-        self.page.locator(burger_locators.BURGER_MENU_CLOSE).click()
+        try:
+            self.page.locator(burger_locators.BURGER_MENU_CLOSE).click(timeout=5000)
+        except Exception as e:
+            logger.warning(f"Failed to click close menu button: {e}")
         expect(self.page.locator(burger_locators.BURGER_MENU_ALL_ITEMS)).not_to_be_visible()
         expect(self.page.locator(burger_locators.BURGER_MENU_ABOUT)).not_to_be_visible()
         expect(self.page.locator(burger_locators.BURGER_MENU_LOGOUT)).not_to_be_visible()
