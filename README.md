@@ -67,6 +67,24 @@ Configuration is managed via environment variables for flexibility across enviro
 - **.env File**: Local overrides (not committed to Git).
 - **Docker Config**: Passed via `docker-compose.yml` and `.env`.
 
+## Quick Start
+- ### Clone and enter the repo
+  ```bash
+  git clone https://github.com/farslancan/saucedemo-playwright-pytest.git
+  cd saucedemo
+  ```
+- ### Local run
+  ```bash
+  pip install -r automation_framework/requirements.txt
+  python -m playwright install chromium
+  pytest -c automation_framework/pytest.ini --alluredir=automation_framework/reports/allure-results
+  ```
+- ### Docker run
+  ```bash
+  cd environment_builder
+  docker-compose up --build
+  ```
+  
 ## Docker: Run Tests In Container (Automated)
 
 ### Prerequisites
@@ -112,7 +130,14 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
 - Download artifacts from the "Artifacts" section (allure-results, allure-report, html-report, playwright-traces, logs).
 - Serve Allure report locally: `allure serve <downloaded-allure-report-folder>`.
 
-### Test Architecture
+### Status & Badges
+| Item | Status/Link |
+| --- | --- |
+| CI (GitHub Actions) | ![CI](https://github.com/farslancan/saucedemo-playwright-pytest/actions/workflows/ci.yml/badge.svg) |
+| Allure Report (GitHub Pages) | https://farslancan.github.io/saucedemo-playwright-pytest/ |
+
+
+## Test Architecture
 - **Test Structure**:
   - `tests/fe/`: Frontend UI tests (login, cart, checkout).
   - `tests/api/`: Placeholder for API tests (empty currently).
@@ -142,6 +167,9 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
 
 ### Allure Reporting
 
+- **Live (GitHub Pages):** The latest Allure report is published here:
+  👉 https://farslancan.github.io/saucedemo-playwright-pytest/
+  To view: open the repo, click the GitHub Pages link in About, or use the link above.
 - Results are written to `automation_framework/reports/allure-results` (default set in `global_config` and enforced in `conftest.py`).
 - UI test failures automatically attach screenshot, page source, and current URL to Allure.
 - All report artifacts live under `automation_framework/reports` (Allure results/report, Playwright traces, HTML report, JUnit XML).
@@ -151,14 +179,15 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
   python -m http.server 8000
   # then open http://localhost:8000
   ```
-- If the report appears empty after download, use the same local server approach above to load assets correctly.
+
+
 
 ### Pytest HTML Report
 
 - Each test run also produces an HTML report via pytest-html at `automation_framework/reports/html-report/pytest-report.html`.
 - The report is self-contained; open it directly in a browser.
 
-### Prerequisites
+## Prerequisites
 
 - Python deps: `pip install -r automation_framework/requirements.txt`
 - Playwright Chromium runtime: `python -m playwright install chromium`
@@ -168,7 +197,7 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
   - macOS (Homebrew): `brew install allure`
   - Linux: download from https://github.com/allure-framework/allure2/releases/latest | sed -E 's/.*"([^"]+)".*/\1/') \
   - Manual: Download from https://github.com/allure-framework/allure2/releases and add to PATH
- 
+
 ### Run Tests (with Allure output)
 
 - `pytest -c automation_framework/pytest.ini`
@@ -203,7 +232,7 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
 - Create a `.env` in the repo root with required variables (example):
   - `USERNAME=standard_user`
   - `PASSWORD=secret_sauce`
-  
+
 - Add `.vscode/settings.json` (or update) so VS Code uses the project config and env file:
   - `{
       "python.testing.pytestEnabled": true,
@@ -227,7 +256,7 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
 - Run or debug the configuration; Allure results go to `automation_framework/reports/allure-results/`.
   - The HTML report is written to `automation_framework/reports/pytest-report.html`.
 
-## Auto-Formatting
+### Auto-Formatting
 
 - Command line (one-time): `pip install -r requirements-dev.txt`
 - Format all files: `black . && isort .`
@@ -236,7 +265,7 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
   - Run on all files once: `pre-commit run -a`
 - VS Code: formatting on save is enabled via `.vscode/settings.json` and uses Black; imports are organized with isort profile Black.
 
-Notes
+### Notes
 
 - Ensure dependencies and Playwright Chromium are installed (see Prerequisites).
 - UI tests: set `HEADLESS=1` for CI/stability; unset or `HEADLESS=0` to watch the browser while debugging.
@@ -265,4 +294,3 @@ Notes
 
 - `HEADLESS=1` to run Playwright headless.
 - `automation_framework/reports/allure-results/environment.properties` is auto-generated with key runtime details.
-
