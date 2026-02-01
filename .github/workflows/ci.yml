@@ -49,13 +49,6 @@ jobs:
         unzip -q /tmp/allure.zip -d /opt
         sudo ln -s /opt/allure-2.24.0/bin/allure /usr/local/bin/allure
 
-    - name: Generate Allure Report
-      if: always()
-      run: |
-        cd automation_framework
-        sudo rm -rf reports/allure-report
-        allure generate reports/allure-results -o reports/allure-report --clean
-
     - name: Ensure report directories exist
       if: always()
       run: |
@@ -69,6 +62,13 @@ jobs:
       if: always()
       run: |
         sudo chmod -R 777 automation_framework/reports/
+
+    - name: Generate Allure Report
+      if: always()
+      run: |
+        cd automation_framework
+        sudo rm -rf reports/allure-report
+        allure generate reports/allure-results -o reports/allure-report --clean
 
     - name: Upload Allure Results
       uses: actions/upload-artifact@v4
