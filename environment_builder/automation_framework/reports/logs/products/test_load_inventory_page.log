@@ -1,7 +1,0 @@
-2026-02-01 13:32:54,835 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
-2026-02-01 13:32:54,836 [INFO] automation_framework.pages.keywords.products_keywords: Verifying inventory page is loaded
-2026-02-01 13:32:54,865 [INFO] automation_framework.pages.keywords.products_keywords: Inventory page loaded with at least one product
-2026-02-01 13:32:54,882 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
-2026-02-01 13:32:54,934 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
-2026-02-01 13:32:54,934 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
-2026-02-01 13:32:55,845 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden
