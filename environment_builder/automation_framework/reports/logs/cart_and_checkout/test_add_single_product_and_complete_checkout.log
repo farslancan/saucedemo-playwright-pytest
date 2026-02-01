@@ -1,0 +1,44 @@
+2026-02-01 13:31:44,994 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:31:44,995 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 0
+2026-02-01 13:31:45,013 [INFO] automation_framework.pages.keywords.products_keywords: Badge visibility check for expected=0 | visible=False
+2026-02-01 13:31:45,016 [INFO] automation_framework.pages.keywords.products_keywords: Badge hidden/absent as expected for count 0
+2026-02-01 13:31:45,017 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:31:45,109 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:31:45,115 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:31:45,131 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/1 | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2026-02-01 13:31:45,171 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=2
+2026-02-01 13:31:45,179 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 1 after adding 1 items
+2026-02-01 13:31:45,179 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 1
+2026-02-01 13:31:45,185 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=1 | actual=1
+2026-02-01 13:31:45,188 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 1
+2026-02-01 13:31:45,188 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:31:45,237 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:31:45,237 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Getting cart items
+2026-02-01 13:31:45,248 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved cart item 1: name='Sauce Labs Bike Light', desc='A red light isn't the desired state in testing but it sure helps when riding your bike at night. Wat', price='$9.99'
+2026-02-01 13:31:45,249 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved 1 cart items
+2026-02-01 13:31:45,249 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:45,262 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Bike Light', desc='A red light isn't the desired state in testing but it sure helps when riding your bike at night. Wat', price='$9.99'
+2026-02-01 13:31:45,262 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 1 cart items validated successfully
+2026-02-01 13:31:45,263 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:31:45,293 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:31:45,294 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:45,325 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:31:45,326 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:45,326 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:31:45,381 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:31:45,382 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verifying checkout overview
+2026-02-01 13:31:45,382 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:45,398 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Bike Light', desc='A red light isn't the desired state in testing but it sure helps when riding your bike at night. Wat', price='$9.99'
+2026-02-01 13:31:45,399 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 1 cart items validated successfully
+2026-02-01 13:31:45,402 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified payment information: 'SauceCard #31337'
+2026-02-01 13:31:45,404 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified shipping information: 'Free Pony Express Delivery!'
+2026-02-01 13:31:45,405 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Calculated totals: item_total=9.99, tax=0.80, total=10.79
+2026-02-01 13:31:45,415 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All totals verified successfully
+2026-02-01 13:31:45,415 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout overview verified
+2026-02-01 13:31:45,415 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Finishing checkout
+2026-02-01 13:31:45,468 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout completed successfully
+2026-02-01 13:31:45,517 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated back to inventory from checkout complete
+2026-02-01 13:31:45,537 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:31:45,571 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:31:45,572 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:31:46,486 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

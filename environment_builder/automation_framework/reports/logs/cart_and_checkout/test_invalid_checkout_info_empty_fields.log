@@ -1,0 +1,24 @@
+2026-02-01 13:31:33,510 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:31:33,512 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:31:33,611 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:31:33,619 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:31:33,640 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/1 | index=6 | name=Test.allTheThings() T-Shirt (Red) | price=$15.99 | desc=This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+2026-02-01 13:31:33,678 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=6
+2026-02-01 13:31:33,685 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 1 after adding 1 items
+2026-02-01 13:31:33,686 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:31:33,740 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:31:33,741 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:31:33,795 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:31:33,796 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:33,821 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='', last_name='a', zip_code='1'
+2026-02-01 13:31:33,822 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:33,867 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:33,899 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='a', last_name='', zip_code='1'
+2026-02-01 13:31:33,901 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:33,946 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:33,979 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='a', last_name='a', zip_code=''
+2026-02-01 13:31:33,981 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:34,048 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:31:34,075 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:31:34,076 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:31:34,988 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

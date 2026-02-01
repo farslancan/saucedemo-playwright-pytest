@@ -1,0 +1,17 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:117 Current badge count before adding: 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=1/1 | index=6 | name=Test.allTheThings() T-Shirt (Red) | price=$15.99 | desc=This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=6
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:154 Badge updated correctly to 1 after adding 1 items
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:18 Opening cart
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:25 Cart opened and default locators visible
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:45 Clicking checkout button
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:48 Navigated to checkout information page
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:100 Canceling checkout
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:108 Returned to cart
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

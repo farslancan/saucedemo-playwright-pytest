@@ -1,0 +1,4 @@
+2026-02-01 13:31:12,915 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:31:12,949 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:31:12,950 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:31:13,856 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

@@ -1,0 +1,12 @@
+2026-02-01 13:33:13,426 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:13,445 [INFO] automation_framework.pages.keywords.products_keywords: Randomly selected product card index=1 of 6
+2026-02-01 13:33:13,455 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:13,492 [INFO] automation_framework.pages.keywords.products_keywords: Opened detail page from card index=1
+2026-02-01 13:33:13,522 [INFO] automation_framework.pages.keywords.products_keywords: Detail values | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:13,522 [INFO] automation_framework.pages.keywords.products_keywords: Verifying detail matches card | expected={'index': 0, 'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99'} | actual={'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99'}
+2026-02-01 13:33:13,523 [INFO] automation_framework.pages.keywords.products_keywords: Detail page matches list card values
+2026-02-01 13:33:13,554 [INFO] automation_framework.pages.keywords.products_keywords: Returned to inventory page after detail verification
+2026-02-01 13:33:13,574 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:13,612 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:13,612 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:14,525 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

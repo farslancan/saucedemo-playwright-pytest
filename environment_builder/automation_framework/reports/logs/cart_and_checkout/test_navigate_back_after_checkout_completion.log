@@ -1,0 +1,23 @@
+2026-02-01 13:32:36,331 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:32:36,333 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:32:36,438 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:32:36,445 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:32:36,465 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/1 | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:32:36,506 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=1
+2026-02-01 13:32:36,515 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 1 after adding 1 items
+2026-02-01 13:32:36,516 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:32:36,566 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:32:36,566 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:32:36,621 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:32:36,622 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:32:36,648 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:32:36,648 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:32:36,649 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:32:36,704 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:32:36,705 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Finishing checkout
+2026-02-01 13:32:36,757 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout completed successfully
+2026-02-01 13:32:36,807 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated back to inventory from checkout complete
+2026-02-01 13:32:36,833 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:32:36,865 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:32:36,865 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:32:37,763 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

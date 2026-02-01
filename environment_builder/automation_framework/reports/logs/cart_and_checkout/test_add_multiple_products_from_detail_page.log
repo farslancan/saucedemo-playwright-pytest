@@ -1,0 +1,46 @@
+2026-02-01 13:31:59,107 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:31:59,109 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:31:59,208 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:31:59,215 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:31:59,233 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/2 | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:31:59,272 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=1
+2026-02-01 13:31:59,286 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=2/2 | index=3 | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2026-02-01 13:31:59,320 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=3
+2026-02-01 13:31:59,328 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 2 after adding 2 items
+2026-02-01 13:31:59,329 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 2
+2026-02-01 13:31:59,338 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=2 | actual=2
+2026-02-01 13:31:59,342 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 2
+2026-02-01 13:31:59,342 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:31:59,387 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:31:59,387 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Getting cart items
+2026-02-01 13:31:59,398 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:59,407 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved cart item 2: name='Sauce Labs Bolt T-Shirt', desc='Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun', price='$15.99'
+2026-02-01 13:31:59,408 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved 2 cart items
+2026-02-01 13:31:59,409 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:59,420 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:59,430 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 2: name='Sauce Labs Bolt T-Shirt', desc='Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun', price='$15.99'
+2026-02-01 13:31:59,430 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 2 cart items validated successfully
+2026-02-01 13:31:59,431 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:31:59,474 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:31:59,475 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:59,507 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:31:59,508 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:59,509 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:31:59,574 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:31:59,575 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verifying checkout overview
+2026-02-01 13:31:59,576 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:59,590 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:59,598 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 2: name='Sauce Labs Bolt T-Shirt', desc='Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun', price='$15.99'
+2026-02-01 13:31:59,599 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 2 cart items validated successfully
+2026-02-01 13:31:59,602 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified payment information: 'SauceCard #31337'
+2026-02-01 13:31:59,605 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified shipping information: 'Free Pony Express Delivery!'
+2026-02-01 13:31:59,605 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Calculated totals: item_total=45.98, tax=3.68, total=49.66
+2026-02-01 13:31:59,613 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All totals verified successfully
+2026-02-01 13:31:59,613 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout overview verified
+2026-02-01 13:31:59,613 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Finishing checkout
+2026-02-01 13:31:59,664 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout completed successfully
+2026-02-01 13:31:59,711 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated back to inventory from checkout complete
+2026-02-01 13:31:59,727 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:31:59,770 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:31:59,771 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:32:00,686 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

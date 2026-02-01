@@ -1,0 +1,20 @@
+2026-02-01 13:33:22,303 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:22,304 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:33:22,415 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:33:22,422 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:33:22,441 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/1 | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:22,477 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=1
+2026-02-01 13:33:22,486 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 1 after adding 1 items
+2026-02-01 13:33:22,486 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 1
+2026-02-01 13:33:22,492 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=1 | actual=1
+2026-02-01 13:33:22,496 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 1
+2026-02-01 13:33:22,497 [INFO] automation_framework.pages.keywords.products_keywords: Opening cart from inventory
+2026-02-01 13:33:22,535 [INFO] automation_framework.pages.keywords.products_keywords: Cart page opened; continue button visible
+2026-02-01 13:33:22,536 [INFO] automation_framework.pages.keywords.products_keywords: Returning to inventory from cart
+2026-02-01 13:33:22,588 [INFO] automation_framework.pages.keywords.products_keywords: Returned to inventory page from cart
+2026-02-01 13:33:22,589 [INFO] automation_framework.pages.keywords.products_keywords: Verifying inventory page is loaded
+2026-02-01 13:33:22,610 [INFO] automation_framework.pages.keywords.products_keywords: Inventory page loaded with at least one product
+2026-02-01 13:33:22,620 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:22,644 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:22,644 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:23,558 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

@@ -1,0 +1,26 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:117 Current badge count before adding: 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=1/1 | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99 | desc=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=4
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:154 Badge updated correctly to 1 after adding 1 items
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:173 Verifying cart badge equals 1
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:191 Badge text verification | expected=1 | actual=1
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:197 Badge text matches expected count 1
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:442 Opening cart from inventory
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:447 Cart page opened; continue button visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:56 Asserting burger menu items are visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:61 Burger menu items verified
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:95 Closing burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:101 Burger menu closed and items hidden
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:450 Returning to inventory from cart
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:456 Returned to inventory page from cart
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:23 Verifying inventory page is loaded
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:29 Inventory page loaded with at least one product
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

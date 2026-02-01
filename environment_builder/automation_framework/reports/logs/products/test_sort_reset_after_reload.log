@@ -1,0 +1,17 @@
+2026-02-01 13:33:40,245 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:40,247 [INFO] automation_framework.pages.keywords.products_keywords: Selecting sort option: Price (low to high)
+2026-02-01 13:33:40,333 [INFO] automation_framework.pages.keywords.products_keywords: Sort option Price (low to high) selected
+2026-02-01 13:33:40,333 [INFO] automation_framework.pages.keywords.products_keywords: Verifying products are sorted by price (low_high)
+2026-02-01 13:33:40,341 [INFO] automation_framework.pages.keywords.products_keywords: Collected product prices
+2026-02-01 13:33:40,341 [INFO] automation_framework.pages.keywords.products_keywords: Price sort verification | order=low_high | actual=[7.99, 9.99, 15.99, 15.99, 29.99, 49.99] | expected=[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
+2026-02-01 13:33:40,342 [INFO] automation_framework.pages.keywords.products_keywords: Products sorted correctly by price (low_high)
+2026-02-01 13:33:40,944 [INFO] automation_framework.pages.keywords.products_keywords: Verifying sort dropdown displays: Name (A to Z)
+2026-02-01 13:33:40,959 [INFO] automation_framework.pages.keywords.products_keywords: Sort dropdown label matches: Name (A to Z)
+2026-02-01 13:33:40,959 [INFO] automation_framework.pages.keywords.products_keywords: Verifying products are sorted by name (asc)
+2026-02-01 13:33:40,971 [INFO] automation_framework.pages.keywords.products_keywords: Collected product names
+2026-02-01 13:33:40,971 [INFO] automation_framework.pages.keywords.products_keywords: Name sort verification | order=asc | actual=['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'] | expected=['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-02-01 13:33:40,972 [INFO] automation_framework.pages.keywords.products_keywords: Products sorted correctly by name (asc)
+2026-02-01 13:33:40,983 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:41,007 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:41,008 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:41,921 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

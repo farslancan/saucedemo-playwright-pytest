@@ -1,0 +1,11 @@
+2026-02-01 13:33:09,208 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:09,210 [INFO] automation_framework.pages.keywords.products_keywords: Selecting sort option: Price (low to high)
+2026-02-01 13:33:09,305 [INFO] automation_framework.pages.keywords.products_keywords: Sort option Price (low to high) selected
+2026-02-01 13:33:09,306 [INFO] automation_framework.pages.keywords.products_keywords: Verifying products are sorted by price (low_high)
+2026-02-01 13:33:09,314 [INFO] automation_framework.pages.keywords.products_keywords: Collected product prices
+2026-02-01 13:33:09,314 [INFO] automation_framework.pages.keywords.products_keywords: Price sort verification | order=low_high | actual=[7.99, 9.99, 15.99, 15.99, 29.99, 49.99] | expected=[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
+2026-02-01 13:33:09,315 [INFO] automation_framework.pages.keywords.products_keywords: Products sorted correctly by price (low_high)
+2026-02-01 13:33:09,326 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:09,388 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:09,389 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:10,292 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

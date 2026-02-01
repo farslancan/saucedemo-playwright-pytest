@@ -1,0 +1,26 @@
+2026-02-01 13:33:42,972 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:42,973 [INFO] automation_framework.pages.keywords.products_keywords: Getting total product card count on inventory page
+2026-02-01 13:33:42,993 [INFO] automation_framework.pages.keywords.products_keywords: Total product cards found: 6
+2026-02-01 13:33:42,994 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:33:43,078 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:33:43,086 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:33:43,104 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/6 | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2026-02-01 13:33:43,140 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=2
+2026-02-01 13:33:43,155 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=2/6 | index=3 | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2026-02-01 13:33:43,191 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=3
+2026-02-01 13:33:43,206 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=3/6 | index=6 | name=Test.allTheThings() T-Shirt (Red) | price=$15.99 | desc=This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+2026-02-01 13:33:43,240 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=6
+2026-02-01 13:33:43,256 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=4/6 | index=5 | name=Sauce Labs Onesie | price=$7.99 | desc=Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+2026-02-01 13:33:43,288 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=5
+2026-02-01 13:33:43,302 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=5/6 | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:43,339 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=1
+2026-02-01 13:33:43,354 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=6/6 | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99 | desc=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+2026-02-01 13:33:43,389 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=4
+2026-02-01 13:33:43,395 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 6 after adding 6 items
+2026-02-01 13:33:43,395 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 6
+2026-02-01 13:33:43,401 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=6 | actual=6
+2026-02-01 13:33:43,403 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 6
+2026-02-01 13:33:43,413 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:43,438 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:43,438 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:44,339 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

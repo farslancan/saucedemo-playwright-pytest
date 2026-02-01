@@ -1,0 +1,43 @@
+2026-02-01 13:31:56,502 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:31:56,520 [INFO] automation_framework.pages.keywords.products_keywords: Randomly selected product card index=1 of 6
+2026-02-01 13:31:56,521 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart from detail page | index=1
+2026-02-01 13:31:56,521 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:31:56,609 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:31:56,620 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:31:56,656 [INFO] automation_framework.pages.keywords.products_keywords: Opened detail page from card index=1
+2026-02-01 13:31:56,707 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove on detail after adding | index=1
+2026-02-01 13:31:56,708 [INFO] automation_framework.pages.keywords.products_keywords: Added from detail | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:31:56,709 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 1
+2026-02-01 13:31:56,716 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=1 | actual=1
+2026-02-01 13:31:56,719 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 1
+2026-02-01 13:31:56,720 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:31:56,767 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:31:56,767 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Getting cart items
+2026-02-01 13:31:56,776 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:56,776 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Retrieved 1 cart items
+2026-02-01 13:31:56,776 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:56,786 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:56,786 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 1 cart items validated successfully
+2026-02-01 13:31:56,787 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:31:56,830 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:31:56,831 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:31:56,864 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:31:56,865 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:31:56,865 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:31:56,909 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:31:56,910 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verifying checkout overview
+2026-02-01 13:31:56,910 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart items
+2026-02-01 13:31:56,926 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validated cart item 1: name='Sauce Labs Backpack', desc='carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequ', price='$29.99'
+2026-02-01 13:31:56,927 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All 1 cart items validated successfully
+2026-02-01 13:31:56,929 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified payment information: 'SauceCard #31337'
+2026-02-01 13:31:56,932 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Verified shipping information: 'Free Pony Express Delivery!'
+2026-02-01 13:31:56,932 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Calculated totals: item_total=29.99, tax=2.40, total=32.39
+2026-02-01 13:31:56,939 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: All totals verified successfully
+2026-02-01 13:31:56,940 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout overview verified
+2026-02-01 13:31:56,940 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Finishing checkout
+2026-02-01 13:31:56,982 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout completed successfully
+2026-02-01 13:31:57,030 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated back to inventory from checkout complete
+2026-02-01 13:31:57,046 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:31:57,087 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:31:57,088 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:31:58,001 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

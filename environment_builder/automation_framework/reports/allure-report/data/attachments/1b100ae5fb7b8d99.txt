@@ -1,0 +1,25 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:117 Current badge count before adding: 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=1/2 | index=3 | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=3
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=2/2 | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=2
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:154 Badge updated correctly to 2 after adding 2 items
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:173 Verifying cart badge equals 2
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:191 Badge text verification | expected=2 | actual=2
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:197 Badge text matches expected count 2
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:173 Verifying cart badge equals 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:177 Badge visibility check for expected=0 | visible=False
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:184 Badge hidden/absent as expected for count 0
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:95 Closing burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:101 Burger menu closed and items hidden
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

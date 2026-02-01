@@ -1,0 +1,19 @@
+2026-02-01 13:33:26,607 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:26,609 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:33:26,715 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:33:26,722 [INFO] automation_framework.pages.keywords.products_keywords: Current badge count before adding: 0
+2026-02-01 13:33:26,741 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=1/2 | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99 | desc=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+2026-02-01 13:33:26,777 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=4
+2026-02-01 13:33:26,792 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart | selection=2/2 | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2026-02-01 13:33:26,825 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=2
+2026-02-01 13:33:26,833 [INFO] automation_framework.pages.keywords.products_keywords: Badge updated correctly to 2 after adding 2 items
+2026-02-01 13:33:26,834 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 2
+2026-02-01 13:33:26,839 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=2 | actual=2
+2026-02-01 13:33:26,842 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 2
+2026-02-01 13:33:27,422 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 2
+2026-02-01 13:33:27,436 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=2 | actual=2
+2026-02-01 13:33:27,439 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 2
+2026-02-01 13:33:27,447 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:27,477 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:27,477 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:28,390 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

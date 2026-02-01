@@ -1,0 +1,14 @@
+2026-02-01 13:33:15,545 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:33:15,564 [INFO] automation_framework.pages.keywords.products_keywords: Randomly selected product card index=1 of 6
+2026-02-01 13:33:15,565 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart from detail page | index=1
+2026-02-01 13:33:15,565 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:33:15,653 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:33:15,662 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:15,710 [INFO] automation_framework.pages.keywords.products_keywords: Opened detail page from card index=1
+2026-02-01 13:33:15,762 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove on detail after adding | index=1
+2026-02-01 13:33:15,763 [INFO] automation_framework.pages.keywords.products_keywords: Added from detail | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:33:15,816 [INFO] automation_framework.pages.keywords.products_keywords: Returned to inventory page after detail verification
+2026-02-01 13:33:15,831 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:33:15,876 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:33:15,876 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:33:16,792 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

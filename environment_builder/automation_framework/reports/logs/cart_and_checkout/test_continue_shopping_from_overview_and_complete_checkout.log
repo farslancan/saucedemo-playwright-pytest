@@ -1,0 +1,41 @@
+2026-02-01 13:32:25,586 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:32:25,587 [INFO] automation_framework.pages.keywords.products_keywords: Adding product by index=1
+2026-02-01 13:32:25,587 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:32:25,688 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:32:25,701 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=1 | name=Sauce Labs Backpack | price=$29.99 | desc=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2026-02-01 13:32:25,752 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=1
+2026-02-01 13:32:25,753 [INFO] automation_framework.pages.keywords.products_keywords: Added product to cart | index=1 | name=Sauce Labs Backpack | price=$29.99
+2026-02-01 13:32:25,753 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:32:25,814 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:32:25,814 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:32:25,855 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:32:25,856 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:32:25,883 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:32:25,883 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:32:25,883 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:32:25,923 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:32:25,924 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Canceling checkout
+2026-02-01 13:32:25,972 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Returned to products page from overview
+2026-02-01 13:32:25,973 [INFO] automation_framework.pages.keywords.products_keywords: Adding product by index=2
+2026-02-01 13:32:25,989 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2026-02-01 13:32:26,033 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove after adding | index=2
+2026-02-01 13:32:26,034 [INFO] automation_framework.pages.keywords.products_keywords: Added product to cart | index=2 | name=Sauce Labs Bike Light | price=$9.99
+2026-02-01 13:32:26,034 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:32:26,103 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:32:26,104 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 2
+2026-02-01 13:32:26,110 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=2 | actual=2
+2026-02-01 13:32:26,113 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 2
+2026-02-01 13:32:26,114 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Clicking checkout button
+2026-02-01 13:32:26,153 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout information page
+2026-02-01 13:32:26,153 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filling checkout information
+2026-02-01 13:32:26,182 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+2026-02-01 13:32:26,182 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout information filled
+2026-02-01 13:32:26,182 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Proceeding to checkout overview
+2026-02-01 13:32:26,221 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated to checkout overview
+2026-02-01 13:32:26,222 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Finishing checkout
+2026-02-01 13:32:26,281 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Checkout completed successfully
+2026-02-01 13:32:26,325 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Navigated back to inventory from checkout complete
+2026-02-01 13:32:26,341 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:32:26,384 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:32:26,385 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:32:27,298 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

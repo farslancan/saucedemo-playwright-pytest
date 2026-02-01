@@ -1,0 +1,22 @@
+2026-02-01 13:32:01,785 [DEBUG] automation_framework.pages.keywords.products_keywords: ProductsKeywords initialized
+2026-02-01 13:32:01,804 [INFO] automation_framework.pages.keywords.products_keywords: Randomly selected product card index=3 of 6
+2026-02-01 13:32:01,804 [INFO] automation_framework.pages.keywords.products_keywords: Adding product to cart from detail page | index=3
+2026-02-01 13:32:01,805 [INFO] automation_framework.pages.keywords.products_keywords: Clearing cart before add-to-cart test
+2026-02-01 13:32:01,896 [INFO] automation_framework.pages.keywords.products_keywords: Cart cleared and back on inventory page
+2026-02-01 13:32:01,906 [INFO] automation_framework.pages.keywords.products_keywords: Card values | index=3 | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2026-02-01 13:32:01,952 [INFO] automation_framework.pages.keywords.products_keywords: Opened detail page from card index=3
+2026-02-01 13:32:02,003 [INFO] automation_framework.pages.keywords.products_keywords: Button toggled to Remove on detail after adding | index=3
+2026-02-01 13:32:02,004 [INFO] automation_framework.pages.keywords.products_keywords: Added from detail | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2026-02-01 13:32:02,004 [INFO] automation_framework.pages.keywords.products_keywords: Verifying cart badge equals 1
+2026-02-01 13:32:02,010 [INFO] automation_framework.pages.keywords.products_keywords: Badge text verification | expected=1 | actual=1
+2026-02-01 13:32:02,014 [INFO] automation_framework.pages.keywords.products_keywords: Badge text matches expected count 1
+2026-02-01 13:32:02,014 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Opening cart
+2026-02-01 13:32:02,067 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart opened and default locators visible
+2026-02-01 13:32:02,067 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Removing item from cart at index 0
+2026-02-01 13:32:02,120 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Item removed from cart
+2026-02-01 13:32:02,121 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Validating cart is empty
+2026-02-01 13:32:02,130 [INFO] automation_framework.pages.keywords.cart_and_checkout_keywords: Cart is empty
+2026-02-01 13:32:02,147 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Opening burger menu
+2026-02-01 13:32:02,169 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Burger menu opened and overlay visible
+2026-02-01 13:32:02,170 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Clicking Reset App State
+2026-02-01 13:32:03,084 [INFO] automation_framework.pages.keywords.burger_menu_keywords: Reset App State completed and cart badge cleared/hidden

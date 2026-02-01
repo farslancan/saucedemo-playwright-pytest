@@ -10,22 +10,21 @@ except Exception as exc:  # pragma: no cover - import guard for editor/runtime w
         def __init__(self, *_, **__):
             raise ImportError(
                 "LoginPage could not be imported; ensure dependencies are installed."
-            ) from exc
+            ) from None
     class BurgerMenuKeywords:  # type: ignore
         def __init__(self, *_, **__):
             raise ImportError(
                 "BurgerMenuKeywords could not be imported; ensure dependencies are installed."
-            ) from exc
+            ) from None
     class ProductsKeywords:  # type: ignore
         def __init__(self, *_, **__):
             raise ImportError(
                 "ProductsKeywords could not be imported; ensure dependencies are installed."
-            ) from exc
+            ) from None
     class CartKeywords:  # type: ignore
         def __init__(self, *_, **__):
             raise ImportError(
                 "CartKeywords could not be imported; ensure dependencies are installed."
-            ) from exc
+            ) from None
 
 __all__ = ["LoginPage", "BurgerMenuKeywords", "ProductsKeywords", "CartKeywords"]
-
