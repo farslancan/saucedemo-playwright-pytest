@@ -431,7 +431,7 @@ def reset_after_test(logged_in_page):
     if menu.page.locator(burger_locators.BURGER_MENU).is_visible():
         menu.page.wait_for_load_state("networkidle")
         # Close menu if already open
-        if menu.page.locator(burger_locators.BURGER_MENU_CLOSE).is_visible():
+        if menu.page.locator(burger_locators.BURGER_MENU_OVERLAY).is_visible():
             menu.close_menu_and_verify_hidden()
         menu.open_menu()
         menu.reset_app_state_and_verify()

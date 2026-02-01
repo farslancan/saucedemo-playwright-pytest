@@ -64,6 +64,11 @@ jobs:
         mkdir -p automation_framework/reports/playwright-traces
         mkdir -p automation_framework/reports/logs
 
+    - name: Set permissions for report directories
+      if: always()
+      run: |
+        sudo chmod -R 777 automation_framework/reports/
+
     - name: Upload Allure Results
       uses: actions/upload-artifact@v4
       if: always()
