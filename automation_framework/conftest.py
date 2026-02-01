@@ -414,7 +414,8 @@ def reset_after_test(logged_in_page):
     yield
     # Reset app state after each test, only if on a page with burger menu
     menu = BurgerMenuKeywords(logged_in_page)
-    if menu.page.locator(burger_locators.BURGER_MENU).count() > 0:
+    if menu.page.locator(burger_locators.BURGER_MENU).is_visible():
+        menu.page.wait_for_load_state("networkidle")
         # Close menu if already open
         if menu.page.locator(burger_locators.BURGER_MENU_CLOSE).is_visible():
             menu.close_menu_and_verify_hidden()
