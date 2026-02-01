@@ -40,12 +40,40 @@ jobs:
         cd environment_builder
         docker compose up --build --abort-on-container-exit
 
+    - name: Install Allure CLI
+      run: |
+        sudo apt update
+        sudo apt install -y openjdk-11-jre-headless unzip wget
+        wget -qO /tmp/allure.zip "https://github.com/allure-framework/allure2/releases/download/2.24.0/allure-2.24.0.zip"
+        unzip -q /tmp/allure.zip -d /opt
+        sudo ln -s /opt/allure-2.24.0/bin/allure /usr/local/bin/allure
+
+    - name: Generate Allure Report
+      run: |
+        cd automation_framework
+        allure generate reports/allure-results -o reports/allure-report --clean
+
+    - name: Ensure report directories exist
+      run: |
+        mkdir -p automation_framework/reports/allure-results
+        mkdir -p automation_framework/reports/allure-report
+        mkdir -p automation_framework/reports/html-report
+        mkdir -p automation_framework/reports/playwright-traces
+        mkdir -p automation_framework/reports/logs
+
     - name: Upload Allure Results
       uses: actions/upload-artifact@v4
       if: always()
       with:
         name: allure-results
         path: automation_framework/reports/allure-results/
+
+    - name: Upload Allure Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: allure-report
+        path: automation_framework/reports/allure-report/
 
     - name: Upload HTML Report
       uses: actions/upload-artifact@v4
@@ -66,4 +94,4 @@ jobs:
       if: always()
       with:
         name: logs
-        path: automation_framework/logs/
+        path: automation_framework/reports/logs/

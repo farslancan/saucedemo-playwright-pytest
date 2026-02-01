@@ -188,10 +188,9 @@ Notes
 
 ### Generate and View Allure Report
 
-- Quick serve: `allure serve automation_framework/reports/allure-results`
-- Or generate then open:
-  - `allure generate automation_framework/reports/allure-results -o automation_framework/reports/allure-report --clean`
-  - `allure open automation_framework/reports/allure-report`
+- Reports are generated automatically after test runs.
+- Serve the report: `allure serve automation_framework/reports/allure-results`
+- Or open the generated report: `allure open automation_framework/reports/allure-report`
 
 ### Playwright Traces (Frontend)
 
@@ -258,5 +257,5 @@ A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests a
 ### Viewing CI Results:
 - Go to the Actions tab in your GitHub repository.
 - Click on the latest workflow run.
-- Download artifacts from the "Artifacts" section.
-- Serve Allure report locally: `allure serve <downloaded-allure-results-folder>`.
+- Download artifacts from the "Artifacts" section (allure-results, allure-report, html-report, playwright-traces, logs).
+- Serve Allure report locally: `allure serve <downloaded-allure-report-folder>`.

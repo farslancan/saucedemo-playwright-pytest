@@ -368,6 +368,20 @@ def pytest_sessionfinish(session, exitstatus):
     except Exception:
         pass
 
+    # Auto-generate Allure report
+    import subprocess
+    try:
+        subprocess.run([
+            "allure", "generate", str(results_dir), "-o", gc.ALLURE_REPORT_DIR, "--clean"
+        ], check=True)
+        report_dir = pathlib.Path(gc.ALLURE_REPORT_DIR).resolve()
+        print(f"Allure report generated at: {report_dir}")
+        print(f"Open report: allure open {report_dir}")
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to generate Allure report: {e}")
+    except FileNotFoundError:
+        print("Allure CLI not found. Install Allure to generate reports automatically.")
+
 
 @pytest.fixture(scope="session")
 def auth_storage_state(tmp_path_factory, browser, creds):
