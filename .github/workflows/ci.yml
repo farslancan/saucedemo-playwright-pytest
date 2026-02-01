@@ -53,6 +53,7 @@ jobs:
       if: always()
       run: |
         cd automation_framework
+        rm -rf reports/allure-report
         allure generate reports/allure-results -o reports/allure-report --clean
 
     - name: Ensure report directories exist
