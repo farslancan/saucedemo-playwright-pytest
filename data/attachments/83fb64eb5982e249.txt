@@ -1,0 +1,12 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:316 Randomly selected product card index=2 of 6
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:327 Card values | index=2 | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:344 Opened detail page from card index=2
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:356 Detail values | name=Sauce Labs Bike Light | price=$9.99 | desc=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:369 Verifying detail matches card | expected={'index': 1, 'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99'} | actual={'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99'}
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:377 Detail page matches list card values
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:384 Returned to inventory page after detail verification
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

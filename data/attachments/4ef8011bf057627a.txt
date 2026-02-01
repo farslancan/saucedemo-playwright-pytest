@@ -1,0 +1,33 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:117 Current badge count before adding: 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=1/1 | index=3 | name=Sauce Labs Bolt T-Shirt | price=$15.99 | desc=Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=3
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:154 Badge updated correctly to 1 after adding 1 items
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:173 Verifying cart badge equals 1
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:191 Badge text verification | expected=1 | actual=1
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:197 Badge text matches expected count 1
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:18 Opening cart
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:25 Cart opened and default locators visible
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:45 Clicking checkout button
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:48 Navigated to checkout information page
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:51 Filling checkout information
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:55 Filled checkout info: first_name='John', last_name='Doe', zip_code='12345'
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:56 Checkout information filled
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:59 Proceeding to checkout overview
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:62 Navigated to checkout overview
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:87 Finishing checkout
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:92 Checkout completed successfully
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:97 Navigated back to inventory from checkout complete
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:18 Opening cart
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:25 Cart opened and default locators visible
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:165 Validating cart is empty
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:171 Cart is empty
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:173 Verifying cart badge equals 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:177 Badge visibility check for expected=0 | visible=False
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:184 Badge hidden/absent as expected for count 0
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden
