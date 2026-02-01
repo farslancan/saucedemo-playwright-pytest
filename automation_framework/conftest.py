@@ -17,6 +17,7 @@ from playwright.sync_api import sync_playwright
 from automation_framework.config import global_config as gc
 from automation_framework.pages import LoginPage
 from automation_framework.pages import BurgerMenuKeywords
+from automation_framework.pages.locators import burger_menu_locators as burger_locators
 
 # Ensure repo root is on PYTHONPATH when tests are run from inside automation_framework
 ROOT_DIR = pathlib.Path(__file__).resolve().parents[1]
@@ -411,7 +412,11 @@ def logged_in_page(browser, auth_storage_state):
 @pytest.fixture(autouse=True)
 def reset_after_test(logged_in_page):
     yield
-    # Reset app state after each test
+    # Reset app state after each test, only if on a page with burger menu
     menu = BurgerMenuKeywords(logged_in_page)
-    menu.open_menu()
-    menu.reset_app_state_and_verify()
+    if menu.page.locator(burger_locators.BURGER_MENU).count() > 0:
+        # Close menu if already open
+        if menu.page.locator(burger_locators.BURGER_MENU_CLOSE).is_visible():
+            menu.close_menu_and_verify_hidden()
+        menu.open_menu()
+        menu.reset_app_state_and_verify()

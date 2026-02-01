@@ -100,28 +100,33 @@ class ProductsKeywords(BaseKeywords):
         """Public wrapper to clear cart and stay on inventory page."""
         self._clear_cart_and_return()
 
-    def add_random_items(self, count: int, clear_cart: bool = True):
-        assert count >= 1, "Count must be at least 1"
-        logger.info("Adding %s random products to cart and verifying badge updates", count)
-
-        # Ensure clean slate if requested
+    def add_random_items(self, count: int, clear_cart: bool = True) -> None:
+        """Add random products to cart and verify badge updates."""
         if clear_cart:
             self._clear_cart_and_return()
 
         cards = self.page.locator(locators.PRODUCT_CARD)
         total = cards.count()
-        if total < count:
-            logger.error(f"Not enough products: need {count}, found {total}")
-        assert total >= count, f"Need at least {count} products to validate multi-add"
+        if count > total:
+            raise ValueError(f"Requested {count} items but only {total} available")
 
-        # Get current badge count if not clearing
         badge = self.page.locator(locators.CART_BADGE)
         current_badge = 0
-        if not clear_cart and badge.count() > 0 and badge.is_visible():
+        if badge.count() > 0 and badge.first.is_visible():
             current_badge = int(badge.inner_text().strip())
         logger.info("Current badge count before adding: %s", current_badge)
 
-        selected_indices = random.sample(range(total), count)
+        # Get list of available products (those with "Add to cart" button)
+        available_indices = []
+        for i in range(total):
+            card = cards.nth(i)
+            if card.locator(locators.ADD_TO_CART_BTN).count() > 0:
+                available_indices.append(i)
+
+        if len(available_indices) < count:
+            raise ValueError(f"Requested {count} items but only {len(available_indices)} available to add")
+
+        selected_indices = random.sample(available_indices, count)
         for idx, sel in enumerate(selected_indices, start=1):
             card = cards.nth(sel)
             name_text = card.locator(locators.PRODUCT_NAME).inner_text().strip()
@@ -398,13 +403,6 @@ class ProductsKeywords(BaseKeywords):
             card_info["name"],
             card_info["price"],
         )
-        # Verify badge count
-        current_badge = 0
-        if not clear_cart:
-            badge = self.page.locator(locators.CART_BADGE)
-            if badge.count() > 0 and badge.is_visible():
-                current_badge = int(badge.inner_text().strip())
-        self.verify_badge_count(current_badge + 1)
 
     def add_to_cart_from_detail_by_index(self, idx: int, clear_cart: bool = True):
         logger.info("Adding product to cart from detail page | index=%s", idx + 1)

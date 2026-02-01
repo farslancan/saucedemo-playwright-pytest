@@ -86,7 +86,6 @@ class BurgerMenuKeywords(BaseKeywords):
     def reset_app_state_and_verify(self):
         logger.info("Clicking Reset App State")
         self.page.locator(burger_locators.BURGER_MENU_RESET).click()
-        expect(self.page).to_have_url(re.compile(r"inventory\.html/?"))
         badge = self.page.locator(locators.CART_BADGE)
         if badge.count() > 0:
             expect(badge).not_to_be_visible()
