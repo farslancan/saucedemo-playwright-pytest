@@ -19,16 +19,11 @@ htmlcov/
 .coverage*
 
 # Playwright/Allure/Reports (regenerated)
-# Keep ignoring the default results, but allow selected reports to be committed
+# Commit generated reports/traces/logs, but ignore raw results
 allure-results/
-automation_framework/reports/
-!automation_framework/reports/allure-report/
-!automation_framework/reports/html-report/
-!automation_framework/reports/playwright-traces/
+automation_framework/reports/allure-results/
 automation_framework/logs/
-!automation_framework/logs/
 playwright-report/
-!playwright-report/
 
 # OS
 .DS_Store
