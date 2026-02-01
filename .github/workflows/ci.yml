@@ -41,6 +41,7 @@ jobs:
         docker compose up --build --abort-on-container-exit
 
     - name: Install Allure CLI
+      if: always()
       run: |
         sudo apt update
         sudo apt install -y openjdk-11-jre-headless unzip wget
@@ -49,11 +50,13 @@ jobs:
         sudo ln -s /opt/allure-2.24.0/bin/allure /usr/local/bin/allure
 
     - name: Generate Allure Report
+      if: always()
       run: |
         cd automation_framework
         allure generate reports/allure-results -o reports/allure-report --clean
 
     - name: Ensure report directories exist
+      if: always()
       run: |
         mkdir -p automation_framework/reports/allure-results
         mkdir -p automation_framework/reports/allure-report

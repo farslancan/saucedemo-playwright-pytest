@@ -11,5 +11,5 @@ services:
     env_file:
       - .env
     volumes:
-      - ./automation_framework/reports:/app/automation_framework/reports
-      - ./automation_framework/logs:/app/automation_framework/logs
+      - ../automation_framework/reports:/app/automation_framework/reports
+      - ../automation_framework/logs:/app/automation_framework/logs

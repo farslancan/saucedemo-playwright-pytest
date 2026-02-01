@@ -19,9 +19,9 @@ htmlcov/
 .coverage*
 
 # Playwright/Allure/Reports (regenerated)
-# Commit generated reports/traces/logs, but ignore raw results
+# Ignore all reports and logs
 allure-results/
-automation_framework/reports/allure-results/
+automation_framework/reports/
 automation_framework/logs/
 playwright-report/
 

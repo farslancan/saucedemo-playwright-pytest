@@ -72,7 +72,7 @@ class CartKeywords(BaseKeywords):
         expect(self.page.locator(locators.SHIPPING_INFO)).to_have_text(shipping)
         logger.info("Verified shipping information: '%s'", shipping)
         # Calculate totals
-        item_total = sum(float(item["price"].replace("$", "")) for item in expected_items)
+        item_total = round(sum(float(item["price"].replace("$", "")) for item in expected_items), 2)
         tax = round(item_total * 0.08, 2)  # Assuming 8% tax
         total = item_total + tax
         logger.info("Calculated totals: item_total=%.2f, tax=%.2f, total=%.2f", item_total, tax, total)
