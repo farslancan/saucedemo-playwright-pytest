@@ -1,0 +1,23 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:241 Selecting sort option: Name (Z to A)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:251 Sort option Name (Z to A) selected
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:256 Verifying products are sorted by name (desc)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:216 Collected product names
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:259 Name sort verification | order=desc | actual=['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack'] | expected=['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:266 Products sorted correctly by name (desc)
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:305 Verifying sort dropdown displays: Name (Z to A)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:309 Sort dropdown label matches: Name (Z to A)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:256 Verifying products are sorted by name (desc)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:216 Collected product names
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:259 Name sort verification | order=desc | actual=['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack'] | expected=['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:266 Products sorted correctly by name (desc)
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:95 Closing burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:104 Burger menu closed and items hidden
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

@@ -1,0 +1,24 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:117 Current badge count before adding: 0
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:136 Adding product to cart | selection=1/1 | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99 | desc=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:149 Button toggled to Remove after adding | index=4
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:154 Badge updated correctly to 1 after adding 1 items
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:18 Opening cart
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:25 Cart opened and default locators visible
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:45 Clicking checkout button
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:48 Navigated to checkout information page
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:51 Filling checkout information
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:55 Filled checkout info: first_name='', last_name='a', zip_code='1'
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:56 Checkout information filled
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:51 Filling checkout information
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:55 Filled checkout info: first_name='a', last_name='', zip_code='1'
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:56 Checkout information filled
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:51 Filling checkout information
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:55 Filled checkout info: first_name='a', last_name='a', zip_code=''
+INFO     automation_framework.pages.keywords.cart_and_checkout_keywords:cart_and_checkout_keywords.py:56 Checkout information filled
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

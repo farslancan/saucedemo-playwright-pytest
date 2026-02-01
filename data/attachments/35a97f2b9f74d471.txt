@@ -1,0 +1,16 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:316 Randomly selected product card index=4 of 6
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:387 Adding product by index=4
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:87 Clearing cart before add-to-cart test
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:97 Cart cleared and back on inventory page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:327 Card values | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99 | desc=It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:399 Button toggled to Remove after adding | index=4
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:400 Added product to cart | index=4 | name=Sauce Labs Fleece Jacket | price=$49.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:344 Opened detail page from card index=4
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:430 Removing item from detail page and verifying badge cleared
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:439 Badge cleared after removal on detail page
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:384 Returned to inventory page after detail verification
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

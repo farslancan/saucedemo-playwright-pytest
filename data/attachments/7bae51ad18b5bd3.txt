@@ -1,0 +1,7 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:23 Verifying inventory page is loaded
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:29 Inventory page loaded with at least one product
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden

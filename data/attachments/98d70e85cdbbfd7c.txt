@@ -1,0 +1,19 @@
+DEBUG    automation_framework.pages.keywords.products_keywords:products_keywords.py:20 ProductsKeywords initialized
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:66 Validating product price format ($, decimal, two-digit precision)
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=1 | raw=$29.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=1 | price=$29.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=2 | raw=$9.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=2 | price=$9.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=3 | raw=$15.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=3 | price=$15.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=4 | raw=$49.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=4 | price=$49.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=5 | raw=$7.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=5 | price=$7.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:72 Price format check | index=6 | raw=$15.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:74 Price validated | index=6 | price=$15.99
+INFO     automation_framework.pages.keywords.products_keywords:products_keywords.py:75 All product prices match expected currency format
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:45 Opening burger menu
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:53 Burger menu opened and overlay visible
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:87 Clicking Reset App State
+INFO     automation_framework.pages.keywords.burger_menu_keywords:burger_menu_keywords.py:92 Reset App State completed and cart badge cleared/hidden
