@@ -29,16 +29,16 @@
 ### Assumptions:
 - **Browser and Environment**: Tests run on Chrome/Chromium-based Playwright. Other browsers are not supported.
 - **Data Persistence**: SauceDemo application does not persist data across sessions; tests run in isolation.
-- **User Roles**: Only `standard_user` and `error_user` are tested; other roles (e.g., `locked_out_user`) are out of scope.
 - **Network Stability**: Network connection is assumed stable; slow connections are not tested.
 - **Screen Resolution**: Tests run at 1920x1080 resolution; mobile compatibility is not tested.
+- **Execution Environment**: Tests can run locally, in Docker containers, or via CI/CD pipelines for consistency.
 
 ### Limitations:
 - **Performance Testing**: No load testing or performance measurement; only functional tests.
 - **Cross-Browser**: Only Chromium is supported; Firefox/Safari are not tested.
-- **API Testing**: Only UI testing; backend APIs are not tested.
+- **API Testing**: Only UI testing; backend APIs are not tested (though framework supports API tests).
 - **Data Variability**: Random data reduces predictability; fixed data usage is limited.
-- **CI/CD Integration**: Focused on local runs; full CI/CD integration is missing.
+- **CI/CD Integration**: Automated via GitHub Actions for seamless execution on push/PR.
 - **Error Handling**: Network errors or application crashes are out of scope.
 - **Scalability**: Large datasets or parallel tests are limited; 10+ parallel tests not recommended.
 
@@ -115,59 +115,51 @@ Notes
 - `HEADLESS=1` to run Playwright headless.
 - `automation_framework/reports/allure-results/environment.properties` is auto-generated with key runtime details.
 
-## Docker: Run Tests In Container (Manual)
+## Docker: Run Tests In Container (Automated)
 
 ### Prerequisites
 
 - Docker Desktop (Windows/macOS) or Docker Engine (Linux)
 
-### Build the image
+### Run Tests with Docker Compose
 
-- `docker build -t haud-tests .`
+- Navigate to `environment_builder` directory:
+  - `cd environment_builder`
+- Create a `.env` file with your credentials (example provided in the directory):
+  - `SAUCE_DEMO_URL=https://www.saucedemo.com/`
+  - `USERNAME=standard_user`
+  - `PASSWORD=secret_sauce`
+  - Other variables as needed
+- Run tests:
+  - `docker-compose up --build`
+- This builds the image, starts the container, and automatically runs the FE test suite.
+- Reports are saved to `automation_framework/reports` on your host via volume mounts.
 
-### Start the container (detached, does not auto-run tests)
+### Viewing Reports After Docker Run
 
-- PowerShell (Windows):
-  - `docker run -d --name haud-tests ^`
-    `-e HEADLESS=1 ^`
-    `-e SAUCE_DEMO_URL=%SAUCE_DEMO_URL% -e USERNAME=%USERNAME% -e PASSWORD=%PASSWORD% ^`
-    `-v %CD%/automation_framework/reports:/app/automation_framework/reports ^`
-    `-v %CD%/automation_framework/logs:/app/automation_framework/logs ^`
-    `haud-tests`
+- Allure: `allure serve automation_framework/reports/allure-results`
+- HTML Report: Open `automation_framework/reports/html-report/pytest-report.html` in a browser.
+- Playwright Traces: `python -m playwright show-trace automation_framework/reports/playwright-traces/<trace_file>.zip`
 
-- Bash (macOS/Linux):
-  - `docker run -d --name haud-tests \
-      -e HEADLESS=1 \
-      -e SAUCE_DEMO_URL="SAUCE_DEMO_URL" -e USERNAME="$USERNAME" -e PASSWORD="$PASSWORD" \
-      -v "$PWD"/automation_framework/reports:/app/automation_framework/reports \
-      -v "$PWD"/automation_framework/logs:/app/automation_framework/logs \
-      haud-tests`
+### Notes
 
-### Exec into the container and run tests manually
+- The container runs tests in headless mode for stability.
+- Configuration is passed via environment variables in `.env` and `docker-compose.yml`.
+- If you need to run API tests instead, change `command: ["tests/fe"]` to `command: ["tests/api"]` in `docker-compose.yml`.
 
-- `docker exec -it haud-tests bash`
-- Inside container:
-  - `pytest -c automation_framework/pytest.ini`
-  - Or a single test: `pytest -c automation_framework/pytest.ini automation_framework/tests/api/test_country_network_api.py`
+## CI/CD Pipeline
 
-Notes
+A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests automatically on push or pull request to any branch.
 
-- Allure CLI is installed in the image. Generate report inside the container if preferred:
-  - `allure generate automation_framework/reports/allure-results -o automation_framework/reports/allure-report --clean`
-  - `allure open automation_framework/reports/allure-report`
+### What it does:
+- Checks out the code.
+- Sets up Docker.
+- Creates a `.env` file with default credentials.
+- Runs `docker-compose up --build` to execute FE tests.
+- Uploads test artifacts (Allure results, HTML reports, Playwright traces, logs) for review.
 
-### Docker Compose (optional, starts idle container)
-
-- Create a `.env` with your credentials:
-  - `SAUCE_DEMO_URL=...`
-  - `USERNAME=...`
-  - `PASSWORD=...`
-- Start: `docker compose up -d --build`
-- Exec: `docker compose exec tests bash`
-- Run tests inside: `pytest -c automation_framework/pytest.ini`
-- Stop/Clean: `docker compose down`
-
-### Viewing Reports and Traces After Docker Run
-
-- Allure: `allure serve automation_framework/reports/allure-results` (or generate/open as above).
-- Playwright traces: `python -m playwright show-trace automation_framework/reports/playwright-traces/<trace_file>.zip` on your host. Traces are persisted via the `automation_framework/reports` volume.
+### Viewing CI Results:
+- Go to the Actions tab in your GitHub repository.
+- Click on the latest workflow run.
+- Download artifacts from the "Artifacts" section.
+- Serve Allure report locally: `allure serve <downloaded-allure-results-folder>`.

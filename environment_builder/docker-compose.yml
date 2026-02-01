@@ -1,15 +1,15 @@
-version: "3.8"
-
 services:
   tests:
-    build: .
+    build:
+      context: ..
+      dockerfile: environment_builder/Dockerfile
     image: saucedemo:latest
     working_dir: /app
+    command: ["tests/fe"]
     environment:
-      - HEADLESS=0
+      - HEADLESS=true
     env_file:
       - .env
     volumes:
       - ./automation_framework/reports:/app/automation_framework/reports
       - ./automation_framework/logs:/app/automation_framework/logs
-    command: ["pytest", "-c", "automation_framework/pytest.ini"]

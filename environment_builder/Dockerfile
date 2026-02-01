@@ -21,7 +21,13 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/allure.zip
 
 # Copy the project
-COPY ./automation_framework ./automation_framework
+COPY automation_framework ./automation_framework
+
+# Copy entrypoint script
+COPY environment_builder/docker/entrypoint.sh /app/entrypoint.sh
+
+# Set entrypoint
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 # Default to headless in containers
 ENV HEADLESS=0

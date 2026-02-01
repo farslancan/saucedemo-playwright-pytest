@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd /app
+cd /app/automation_framework
 
 # Allow passing extra pytest args: `docker run image -k "login"` etc.
-exec pytest -c automation_framework/pytest.ini "$@"
+exec pytest -c pytest.ini "$@"
