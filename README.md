@@ -67,6 +67,51 @@ Configuration is managed via environment variables for flexibility across enviro
 - **.env File**: Local overrides (not committed to Git).
 - **Docker Config**: Passed via `docker-compose.yml` and `.env`.
 
+## Docker: Run Tests In Container (Automated)
+
+### Prerequisites
+- Docker Desktop (Windows/macOS) or Docker Engine (Linux)
+
+### Run Tests with Docker Compose
+- Navigate to `environment_builder` directory:
+  - `cd environment_builder`
+- Create a `.env` file with your credentials (example provided in the directory):
+  - `SAUCE_DEMO_URL=https://www.saucedemo.com/`
+  - `USERNAME=standard_user`
+  - `PASSWORD=secret_sauce`
+  - Other variables as needed
+- Run tests:
+  - `docker-compose up --build`
+- This builds the image, starts the container, and automatically runs the FE test suite.
+- Reports are saved to `automation_framework/reports` on your host via volume mounts.
+
+### Viewing Reports After Docker Run
+- Allure: `allure serve automation_framework/reports/allure-results`
+- HTML Report: Open `automation_framework/reports/html-report/pytest-report.html` in a browser.
+- Playwright Traces: `python -m playwright show-trace automation_framework/reports/playwright-traces/<trace_file>.zip`
+
+### Notes
+- The container runs tests in headless mode for stability.
+- Configuration is passed via environment variables in `.env` and `docker-compose.yml`.
+- If you need to run API tests instead, change `command: ["tests/fe"]` to `command: ["tests/api"]` in `docker-compose.yml`.
+
+## CI/CD Pipeline
+
+A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests automatically on push or pull request to any branch.
+
+### What it does:
+- Checks out the code.
+- Sets up Docker.
+- Creates a `.env` file with default credentials.
+- Runs `docker-compose up --build` to execute FE tests.
+- Uploads test artifacts (Allure results, HTML reports, Playwright traces, logs) for review.
+
+### Viewing CI Results:
+- Go to the Actions tab in your GitHub repository.
+- Click on the latest workflow run.
+- Download artifacts from the "Artifacts" section (allure-results, allure-report, html-report, playwright-traces, logs).
+- Serve Allure report locally: `allure serve <downloaded-allure-report-folder>`.
+
 ### Test Architecture
 - **Test Structure**:
   - `tests/fe/`: Frontend UI tests (login, cart, checkout).
@@ -93,11 +138,25 @@ Configuration is managed via environment variables for flexibility across enviro
 - **Data-Driven**: Parameterized tests for multiple scenarios (e.g., different users).
 - **Decorator Pattern**: Allure annotations for reporting enhancements.
 
-## Allure Reporting
+## Reporting
+
+### Allure Reporting
 
 - Results are written to `automation_framework/reports/allure-results` (default set in `global_config` and enforced in `conftest.py`).
 - UI test failures automatically attach screenshot, page source, and current URL to Allure.
 - All report artifacts live under `automation_framework/reports` (Allure results/report, Playwright traces, HTML report, JUnit XML).
+- **Local viewing of downloaded artifacts:** opening `index.html` with `file://` can show blank/Loading. Serve it instead:
+  ```bash
+  cd allure-report
+  python -m http.server 8000
+  # then open http://localhost:8000
+  ```
+- If the report appears empty after download, use the same local server approach above to load assets correctly.
+
+### Pytest HTML Report
+
+- Each test run also produces an HTML report via pytest-html at `automation_framework/reports/html-report/pytest-report.html`.
+- The report is self-contained; open it directly in a browser.
 
 ### Prerequisites
 
@@ -115,10 +174,6 @@ Configuration is managed via environment variables for flexibility across enviro
 - `pytest -c automation_framework/pytest.ini`
   - Overrides: `pytest -c automation_framework/pytest.ini --alluredir=automation_framework/reports/allure-results`
 
-### HTML Report (auto-generated)
-
-- Each test run also produces an HTML report via pytest-html at `automation_framework/reports/pytest-report.html`.
-- The report is self-contained; open it directly in a browser.
 
 ## Assumptions and Limitations
 
@@ -163,7 +218,7 @@ Configuration is managed via environment variables for flexibility across enviro
 
 ### PyCharm
 
-- Create a new Run/Debug Configuration of type “pytest”.
+- Create a new Run/Debug Configuration of type "pytest".
 - Set fields:
   - Working directory: project root
   - Target: `automation_framework/tests`
@@ -198,7 +253,7 @@ Notes
 - Default behavior keeps traces on failures only. Control via `PW_TRACE` env:
   - `PW_TRACE=on-failure` (default)
   - `PW_TRACE=on` (keep for all tests)
-  - `PW_TRACE=off` (don’t keep)
+  - `PW_TRACE=off` (don't keep)
 - View a trace locally:
   - `python -m playwright show-trace automation_framework/reports/playwright-traces/<test_name>.zip`
 
@@ -211,51 +266,3 @@ Notes
 - `HEADLESS=1` to run Playwright headless.
 - `automation_framework/reports/allure-results/environment.properties` is auto-generated with key runtime details.
 
-## Docker: Run Tests In Container (Automated)
-
-### Prerequisites
-
-- Docker Desktop (Windows/macOS) or Docker Engine (Linux)
-
-### Run Tests with Docker Compose
-
-- Navigate to `environment_builder` directory:
-  - `cd environment_builder`
-- Create a `.env` file with your credentials (example provided in the directory):
-  - `SAUCE_DEMO_URL=https://www.saucedemo.com/`
-  - `USERNAME=standard_user`
-  - `PASSWORD=secret_sauce`
-  - Other variables as needed
-- Run tests:
-  - `docker-compose up --build`
-- This builds the image, starts the container, and automatically runs the FE test suite.
-- Reports are saved to `automation_framework/reports` on your host via volume mounts.
-
-### Viewing Reports After Docker Run
-
-- Allure: `allure serve automation_framework/reports/allure-results`
-- HTML Report: Open `automation_framework/reports/html-report/pytest-report.html` in a browser.
-- Playwright Traces: `python -m playwright show-trace automation_framework/reports/playwright-traces/<trace_file>.zip`
-
-### Notes
-
-- The container runs tests in headless mode for stability.
-- Configuration is passed via environment variables in `.env` and `docker-compose.yml`.
-- If you need to run API tests instead, change `command: ["tests/fe"]` to `command: ["tests/api"]` in `docker-compose.yml`.
-
-## CI/CD Pipeline
-
-A GitHub Actions workflow is set up in `.github/workflows/ci.yml` to run tests automatically on push or pull request to any branch.
-
-### What it does:
-- Checks out the code.
-- Sets up Docker.
-- Creates a `.env` file with default credentials.
-- Runs `docker-compose up --build` to execute FE tests.
-- Uploads test artifacts (Allure results, HTML reports, Playwright traces, logs) for review.
-
-### Viewing CI Results:
-- Go to the Actions tab in your GitHub repository.
-- Click on the latest workflow run.
-- Download artifacts from the "Artifacts" section (allure-results, allure-report, html-report, playwright-traces, logs).
-- Serve Allure report locally: `allure serve <downloaded-allure-report-folder>`.

@@ -104,3 +104,12 @@ jobs:
       with:
         name: logs
         path: automation_framework/reports/logs/
+
+    - name: Deploy Allure Report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: automation_framework/reports/allure-report
+        commit_message: "chore: publish allure report"
