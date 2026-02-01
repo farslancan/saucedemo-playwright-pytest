@@ -26,6 +26,9 @@ COPY automation_framework ./automation_framework
 # Copy entrypoint script
 COPY environment_builder/docker/entrypoint.sh /app/entrypoint.sh
 
+# Make entrypoint script executable
+RUN chmod +x /app/entrypoint.sh
+
 # Set entrypoint
 ENTRYPOINT ["/app/entrypoint.sh"]
 
